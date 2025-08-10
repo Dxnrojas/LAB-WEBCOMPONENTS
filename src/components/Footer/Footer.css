@@ -1,0 +1,16 @@
+.footer {
+  margin-top: 48px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  background: #0a0e13;
+}
+
+.footer__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+}
+
+.footer__brand { font-weight: 800; }
+
+.footer__text { color: var(--muted); font-size: 14px; }

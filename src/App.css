@@ -1,42 +1,108 @@
-#root {
-  max-width: 1280px;
+:root {
+  --bg: #0b0f14;
+  --bg-soft: #111723;
+  --card: #141c27;
+  --text: #e8eef6;
+  --muted: #9fb0c4;
+  --brand: #9ad1ff; /* acento frío similar a HoYoverse */
+  --radius: 16px;
+}
+
+* { box-sizing: border-box; }
+
+html, body, #root { height: 100%; }
+
+body {
+  margin: 0;
+  font-family: "Microsoft YaHei", "Microsoft YaHei UI", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.App main { overflow: hidden; }
+
+.container {
+  width: 1200px; /* no responsive solicitado */
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  padding: 0 16px;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.section {
+  padding: 56px 0;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Variación de superficie clara para la sección de galería */
+.section--light {
+  background: #ffffff;
+  color: #0e1117;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.section__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+
+.section__title {
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+  margin: 0 0 24px;
+}
+
+.section__title--xl {
+  margin: 0;
+  font-size: 44px;
+  font-weight: 900;
+  letter-spacing: 0;
+  color: #0d1016;
+}
+
+.section__more {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 16px;
+  color: #2c5cff;
+  background: #e9efff;
+  border: 1px solid rgba(44, 92, 255, 0.15);
+  user-select: none;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* fijo, sin breakpoints */
+  gap: 20px;
 }
 
 .card {
-  padding: 2em;
+  background: var(--card);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
 }
 
-.read-the-docs {
-  color: #888;
+.card__media { width: 100%; height: 200px; object-fit: cover; display: block; }
+
+.card__body { padding: 16px; }
+
+.card__title { font-size: 16px; margin: 0 0 8px; font-weight: 700; }
+
+.card__desc { font-size: 14px; color: var(--muted); line-height: 1.5; margin: 0; }
+
+.btn {
+  display: inline-block;
+  padding: 10px 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.12);
+  background: transparent;
+  color: var(--text);
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  font-weight: 700;
+  cursor: default; /* no interacción */
 }
