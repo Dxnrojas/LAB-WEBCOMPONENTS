@@ -3,7 +3,7 @@ import "./Hero.css";
 export default function Hero() {
   return (
     <section className="hero">
-      <div className="hero__media" role="img" aria-label="Hero HoYoverse"></div>
+      <div className="hero__media" role="img"></div>
       <div className="hero__overlay"></div>
 
       {/* Capa absoluta para que el texto quede ENCIMA de la imagen */}

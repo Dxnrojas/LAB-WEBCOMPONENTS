@@ -21,7 +21,7 @@ export default function Products({ items = [] }) {
                 </div>
               </div>
               <div className="pcard__right">
-                <span className="pcard__more" aria-disabled>
+                <span className="pcard__more">
                   {card.button || "More"}
                 </span>
               </div>

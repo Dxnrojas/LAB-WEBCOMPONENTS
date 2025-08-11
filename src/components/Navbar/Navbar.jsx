@@ -11,7 +11,7 @@ export default function Navbar() {
             className="navbar__logo"
           />
         </div>
-        <nav className="navbar__menu" aria-label="Menú principal">
+        <nav className="navbar__menu">
           <span className="navbar__item is-active">Home</span>
           <span className="navbar__item">News</span>
           <span className="navbar__item">About Us</span>

@@ -1,6 +1,4 @@
-/* ============================
-   App.css — global + layout
-   ============================ */
+
 :root {
   --bg: #0b0f14;
   --bg-soft: #111723;
@@ -23,12 +21,12 @@ body {
   font-family: "Microsoft YaHei", "Microsoft YaHei UI", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
   background: var(--bg);
   color: var(--text);
-  overflow-x: hidden; /* por si algún hijo usa 100vw y genera desbordes */
+  overflow-x: hidden; 
 }
 
 .App main { overflow: hidden; }
 
-/* FULL-WIDTH por defecto: no limitar ancho global ni añadir paddings */
+
 .container {
   width: 100%;
   max-width: none;
@@ -40,27 +38,25 @@ body {
   padding: 0;
 }
 
-/* Superficie clara (blanco) para las secciones que lo necesiten */
 .section--light {
   background: #ffffff;
   color: #0e1117;
 }
 
-/* SOLO Gallery: bloque reducido/centrado */
+
 .container--gallery {
-  max-width: 1240px;   /* ajusta 1200/1280 si quieres */
+  max-width: 1240px;   
   margin: 0 auto;
-  padding: 0;          /* sin gutter para centrar exacto */
+  padding: 0;         
 }
 
-/* SOLO Products: bloque reducido/centrado */
+
 .container--products {
   max-width: 1240px;
   margin: 0 auto;
-  padding: 0;          /* sin gutter para centrar exacto */
+  padding: 0;          
 }
 
-/* Header de sección (título izq + chip “More” der) */
 .section__header {
   display: flex;
   align-items: center;
@@ -80,7 +76,7 @@ body {
   font-size: 44px;
   font-weight: 900;
   letter-spacing: 0;
-  color: #0d1016; /* negro sobre blanco */
+  color: #0d1016; 
 }
 
 .section__more {
@@ -95,7 +91,7 @@ body {
   user-select: none;
 }
 
-/* Utilidades (si las usas) */
+
 .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin: 40px 40px 40px 40px;}
 
 .card {
