@@ -1,29 +1,66 @@
-*{
-  margin: 1rem;
-  padding: 1rem;
-  box-sizing: border-box;
+/* ============================
+   App.css — global + layout
+   ============================ */
+:root {
+  --bg: #0b0f14;
+  --bg-soft: #111723;
+  --card: #141c27;
+  --text: #e8eef6;
+  --muted: #9fb0c4;
+  --brand: #9ad1ff;
+  --radius: 16px;
+}
+
+* { box-sizing: border-box; }
+
+html, body, #root, .App {
+  height: 100%;
+  width: 100%;
 }
 
 body {
   margin: 0;
-  font-family: "Microsoft YaHei", "Microsoft YaHei UI", system-ui;
-  background: #fdfdfd;
-  color: #fdfdfd;
+  font-family: "Microsoft YaHei", "Microsoft YaHei UI", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  overflow-x: hidden; /* por si algún hijo usa 100vw y genera desbordes */
 }
 
 .App main { overflow: hidden; }
 
+/* FULL-WIDTH por defecto: no limitar ancho global ni añadir paddings */
 .container {
-  width: 1200px;
-  max-width: 1200px;
-  margin: 1rem auto;
-  padding: 0 16px;
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
 }
 
 .section {
   padding: 56px 0;
 }
 
+/* Superficie clara (blanco) para las secciones que lo necesiten */
+.section--light {
+  background: #ffffff;
+  color: #0e1117;
+}
+
+/* SOLO Gallery: bloque reducido/centrado */
+.container--gallery {
+  max-width: 1240px;   /* ajusta 1200/1280 si quieres */
+  margin: 0 auto;
+  padding: 0;          /* sin gutter para centrar exacto */
+}
+
+/* SOLO Products: bloque reducido/centrado */
+.container--products {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0;          /* sin gutter para centrar exacto */
+}
+
+/* Header de sección (título izq + chip “More” der) */
 .section__header {
   display: flex;
   align-items: center;
@@ -43,7 +80,7 @@ body {
   font-size: 44px;
   font-weight: 900;
   letter-spacing: 0;
-  color: #0d1016;
+  color: #0d1016; /* negro sobre blanco */
 }
 
 .section__more {
@@ -58,11 +95,8 @@ body {
   user-select: none;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* fijo, sin breakpoints */
-  gap: 20px;
-}
+/* Utilidades (si las usas) */
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
 
 .card {
   background: var(--card);
@@ -73,12 +107,9 @@ body {
 }
 
 .card__media { width: 100%; height: 200px; object-fit: cover; display: block; }
-
 .card__body { padding: 16px; }
-
 .card__title { font-size: 16px; margin: 0 0 8px; font-weight: 700; }
-
-.card__desc { font-size: 14px; color: var(--muted); line-height: 1.5; margin: 0; }
+.card__desc  { font-size: 14px; color: var(--muted); line-height: 1.5; margin: 0; }
 
 .btn {
   display: inline-block;
@@ -90,5 +121,5 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.6px;
   font-weight: 700;
-  cursor: default; /* no interacción */
+  cursor: default;
 }

@@ -38,12 +38,5 @@ export const galeria = [
     title: "Honkai: Star Rail",
     description:
       "Honkai: Star Rail Version 3.4 “For the Sun is Set to Die” Will Land on July 02",
-  },
-  {
-    id: 7,
-    img: "https://fastcdn.hoyoverse.com/content-v2/plat/157079/28f78d5993bbc28bc37ee9d59b92be59_6590477694943496865.jpeg?x-oss-process=image/resize,w_800/quality,q_80",
-    title: "Genshin Impact",
-    description:
-      "Genshin Impact Version 5.7 Welcomes Skirk, the Sinner's Pupil and Fool's Master, on June 18th",
-  },
+  }
 ];

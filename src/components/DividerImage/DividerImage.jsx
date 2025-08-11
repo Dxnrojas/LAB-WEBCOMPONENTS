@@ -5,7 +5,7 @@ export default function DividerImage() {
     <section className="divider">
       <img
         className="divider__img"
-        src="https://i.redd.it/mihoyo-announces-new-branding-hoyoverse-official-statement-v0-vzzhz5jm2ph81.png?width=1314&format=png&auto=webp&s=324c3603802691398c99e331d6427ef036395ee6"
+        src="https://www.hoyoverse.com/_nuxt/img/layer-0.2e7f026.png"
         alt="Imagen separadora HoYoverse"
       />
     </section>

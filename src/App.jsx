@@ -8,6 +8,7 @@ import Footer from "./components/Footer/Footer.jsx";
 
 import { galeria } from "./data/galeria.js";
 import { products } from "./data/products.js";
+import "./App.css";
 
 export default function App() {
   return (
@@ -15,8 +16,10 @@ export default function App() {
       <Navbar />
       <main>
         <Hero />
+
+        {/* Latest Updates — sección clara; wrapper reducido/centrado */}
         <section className="section section--light">
-          <div className="container">
+          <div className="container container--gallery">
             <div className="section__header">
               <h2 className="section__title section__title--xl">Latest Updates</h2>
               <span className="section__more" aria-hidden>More</span>
@@ -27,15 +30,20 @@ export default function App() {
 
         <DividerImage />
 
-        <section className="section">
-          <div className="container">
-            <h2 className="section__title">Nuestros productos</h2>
+        {/* Our Products — página full-width; SOLO esta sección reducida y centrada */}
+        <section className="section section--light">
+          <div className="container container--products">
+            <h2 className="section__title section__title--xl">Our Products</h2>
             <Products items={products} />
           </div>
         </section>
 
-       <About />
-
+        {/* About (con su propio fondo) */}
+        <section className="section">
+          <div className="container">
+            <About />
+          </div>
+        </section>
       </main>
       <Footer />
     </div>
