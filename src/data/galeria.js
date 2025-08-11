@@ -38,5 +38,17 @@ export const galeria = [
     title: "Honkai: Star Rail",
     description:
       "Honkai: Star Rail Version 3.4 “For the Sun is Set to Die” Will Land on July 02",
-  }
+  },
+  {
+    id: 7,
+    img: "https://fastcdn.hoyoverse.com/content-v2/plat/127049/f6dfee9a74478eccbe59c547277241df_8486989767390294446.jpeg?x-oss-process=image/resize,w_800/quality,q_80",
+    title: "HoYoverse",
+    description: "HoYoverse Announces Gamescom 2025 Lineup",
+  },
+  {
+    id: 7,
+    img: "https://gaming-cdn.com/images/news/articles/7854/cover/1000x563/el-presidente-de-hoyoverse-se-ha-pronunciado-sobre-las-criticas-en-un-evento-de-genshin-impact-cover66c31361eb9a2.jpg",
+    title: "HoYoverse",
+    description: "HoYoverse Announces Gamescom 2025 Lineup",
+  },
 ];

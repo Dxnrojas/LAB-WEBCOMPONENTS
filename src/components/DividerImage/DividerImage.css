@@ -1,4 +1,4 @@
-.divider { padding: 40px 0; }
+.divider { padding: 10px 0; }
 
 .divider__img {
   display: block;
@@ -6,5 +6,4 @@
   height: 360px;
   object-fit: cover;
   border-radius: var(--radius);
-  border: 1px solid rgba(255,255,255,0.06);
 }
