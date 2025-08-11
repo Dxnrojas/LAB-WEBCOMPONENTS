@@ -6,7 +6,6 @@ export default function Hero() {
       <div className="hero__media" role="img"></div>
       <div className="hero__overlay"></div>
 
-      {/* Capa absoluta para que el texto quede ENCIMA de la imagen */}
       <div className="hero__layer">
         <div className="container">
           <div className="hero__content">

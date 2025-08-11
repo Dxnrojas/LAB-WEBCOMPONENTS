@@ -4,7 +4,6 @@ export default function Products({ items = [] }) {
   return (
     <div className="products products--grid">
       {items.map((card) => {
-        // Si no tenemos icono específico, usamos la misma imagen recortada
         const icon = card.icon || card.img;
         return (
           <article key={card.id} className="pcard">
