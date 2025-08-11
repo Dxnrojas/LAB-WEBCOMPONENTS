@@ -1,10 +1,84 @@
 .about {
-  background: var(--bg-soft);
-  border: 1px solid rgba(255,255,255,0.06);
-  border-radius: var(--radius);
-  padding: 24px;
+  position: relative;
+  padding: 64px 0;
+  color: #ffffff;
+  font-family: "Microsoft YaHei", "Segoe UI", system-ui, -apple-system, Roboto, Helvetica, Arial, sans-serif;
 }
 
-.about__title { margin: 0 0 12px; font-size: 22px; }
+/* Fondo estrellado de la sección */
+.about--stars {
+  background-image: url("https://png.pngtree.com/background/20240507/original/pngtree-awe-inspiring-night-sky-with-shimmering-stars-and-glittering-purple-and-picture-image_8838935.jpg");
+  background-size: cover;
+  background-position: center;
+}
 
-.about__text { margin: 0; color: var(--muted); line-height: 1.7; }
+/* Velo para mejorar contraste del texto */
+.about__veil {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 70% 30%, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.35) 45%, rgba(0,0,0,0.6) 100%);
+  pointer-events: none;
+}
+
+.about .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* 2 cards en fila */
+.about__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+
+/* Card translúcida con blur */
+.aboutCard {
+  position: relative;
+  min-height: 170px;
+  padding: 24px 24px 24px 28px;
+  background: rgba(21, 31, 46, 0.68);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+  backdrop-filter: saturate(120%) blur(6px);
+}
+
+.aboutCard__title {
+  margin: 0 0 10px 0;
+  font-size: 34px;
+  font-weight: 800;
+  letter-spacing: 0.2px;
+  color: #fff;
+}
+
+/* Barrita azul bajo el título */
+.aboutCard__underline {
+  display: inline-block;
+  width: 24px;
+  height: 6px;
+  border-radius: 6px;
+  background: #85a7ff;
+  box-shadow: 0 2px 8px rgba(133,167,255,0.5);
+}
+
+/* Botón circular con flecha (estático, con hover sutil) */
+.aboutCard__cta {
+  position: absolute;
+  right: 18px;
+  bottom: 18px;
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  color: #fff; /* color del trazo del SVG */
+  background: linear-gradient(135deg, #8fb3ff 0%, #6a8dff 100%);
+  box-shadow: 0 10px 22px rgba(90,120,255,0.35);
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.aboutCard:hover .aboutCard__cta {
+  transform: translateX(2px);
+  box-shadow: 0 14px 28px rgba(90,120,255,0.45);
+}

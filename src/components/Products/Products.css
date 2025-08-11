@@ -1,1 +1,90 @@
-.product__media { height: 220px; }
+.products--grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+
+/* Card */
+.pcard {
+  background: #ffffff;
+  border-radius: 18px;
+  border: 1px solid #e6ebf3;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(31, 45, 61, 0.08);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+.pcard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(31, 45, 61, 0.14);
+}
+
+/* Media */
+.pcard__mediaWrap { position: relative; }
+.pcard__media {
+  display: block;
+  width: 100%;
+  height: 260px;              /* alto aproximado como la referencia */
+  object-fit: cover;
+}
+
+/* Banda inferior con info */
+.pcard__info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 18px;
+  background: #f5f7fb;
+}
+
+.pcard__left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.pcard__icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  object-fit: cover;
+  flex: 0 0 36px;
+}
+
+.pcard__texts { min-width: 0; }
+
+.pcard__title {
+  font-family: "Microsoft YaHei", "Segoe UI", system-ui, -apple-system, Roboto, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;           /* “regular” visual; no ultra bold */
+  color: #0d1016;             /* negro */
+  line-height: 1.2;
+  margin: 0 0 2px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.pcard__desc {
+  font-size: 13.5px;
+  color: #6e7a8a;             /* gris */
+  line-height: 1.35;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.pcard__right { flex: 0 0 auto; }
+
+.pcard__more {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: #eef2ff;        /* pastilla clara */
+  color: #5f73ff;             /* texto azul */
+  font-weight: 700;
+  font-size: 16px;
+  border: 1px solid rgba(95, 115, 255, 0.15);
+  user-select: none;
+}

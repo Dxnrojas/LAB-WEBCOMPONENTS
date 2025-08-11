@@ -43,21 +43,22 @@
   font-weight: 700;
   opacity: 0.95;
   margin-bottom: 12px;
+  margin: 2rem;
 }
 
 .hero__title {
   font-size: 84px;
   font-weight: 900;
   line-height: 1.02;
-  margin: 0 0 4px 0;
-  letter-spacing: -0.5px;
+  margin: 2rem;
+  letter-spacing: 4px;
 }
 
 .hero__subtitle {
   font-size: 56px;
   font-weight: 800;
   line-height: 1.06;
-  margin: 0;
+  margin: 2rem;
 }
 
 .hero__subtitle--bottom { margin-top: 2px; }

@@ -34,11 +34,8 @@ export default function App() {
           </div>
         </section>
 
-        <section className="section">
-          <div className="container">
-            <About />
-          </div>
-        </section>
+       <About />
+
       </main>
       <Footer />
     </div>
